@@ -4,7 +4,7 @@ const delay = require('delay');
 const config = require('../config/config');
 
 
-const getResult = async (jobId, expectedStatus, timeout=60000, interval=1000) => {
+const getResult = async (jobId, expectedStatus, timeout=60*1000*10, interval=1000) => {
     const start = Date.now();
     do {
         process.stdout.write('.')
