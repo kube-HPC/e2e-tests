@@ -1,5 +1,5 @@
 {
     "mocha.env": {
-        "BASE_URL":"https://40.69.222.75"
+        "BASE_URL":"https://10.32.10.11"
     }
 }
