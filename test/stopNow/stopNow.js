@@ -3,6 +3,7 @@ const expect = chai.expect;
 const should = chai.should();
 const chaiHttp = require('chai-http');
 const config = require('../../config/config');
+const delay = require('delay');
 const { getResult, getStatus } = require('../../utils/results');
 chai.use(chaiHttp);
 
@@ -18,7 +19,7 @@ describe('stop pipeline', () => {
         res.should.have.status(200);
         res.body.should.have.property('jobId');
         const jobId = res.body.jobId;
-
+        await delay(2000);
         const stopRes = await chai.request(config.apiServerUrl)
             .post('/exec/stop')
             .send({ jobId, reason: 'from test' });
