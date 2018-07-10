@@ -11,7 +11,7 @@ chai.use(chaiHttp);
 describe('stop pipeline', () => {
     it('should stop immediately', async () => {
         const body = {
-            name: 'simple'
+            name: 'stop-now'
         };
         const res = await chai.request(config.apiServerUrl)
             .post('/exec/stored')
