@@ -19,7 +19,6 @@ describe('stop pipeline', () => {
         res.should.have.status(200);
         res.body.should.have.property('jobId');
         const jobId = res.body.jobId;
-        await delay(2000);
         const stopRes = await chai.request(config.apiServerUrl)
             .post('/exec/stop')
             .send({ jobId, reason: 'from test' });
