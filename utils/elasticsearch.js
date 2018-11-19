@@ -13,7 +13,7 @@ const getClient = () => {
     return _client;
 }
 
-const waitForLog = async (message, tags = {}, timeout = 60000, interval=1000) => {
+const waitForLog = async (message, tags = {}, timeout = 5*60*1000, interval=1000) => {
     const client = getClient();
 
     const terms = Object.entries(tags).map(([k, v]) => ({ term: { [k]: v } }));
