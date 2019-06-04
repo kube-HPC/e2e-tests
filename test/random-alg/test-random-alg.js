@@ -16,7 +16,7 @@ describe('random-name algorithm', () => {
             .post('/store/algorithms')
             .send({
                 name: algoName,
-                algorithmImage: "hkube/algorithm-example",
+                algorithmImage: "hkube/algorithm-example-python:v1.0.1",
                 cpu: 1,
                 mem: "256Mi"
             });
