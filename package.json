@@ -14,7 +14,7 @@
     "chai-http": "^4.0.0",
     "crypto-random-string": "^1.0.0",
     "delay": "^3.0.0",
-    "elasticsearch": "^15.0.0",
+    "elasticsearch": "^15.5.0",
     "mocha": "^5.2.0",
     "uuid": "^3.2.1"
   }
